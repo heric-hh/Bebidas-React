@@ -106,6 +106,7 @@ export default function Header() {
                 value={searchFilters.category}
                 onChange={handleChange}
               >
+                <option value="">- Seleccione -</option>
                 {categories.drinks.map((category) => (
                   <option
                     key={category.strCategory}
