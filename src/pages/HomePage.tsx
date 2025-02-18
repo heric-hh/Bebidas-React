@@ -10,7 +10,7 @@ export default function HomePage() {
       <h1 className="text-6xl font-extrabold">Recetas</h1>
       {hasRecipes ? (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 my-10 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 my-10 gap-10 mx-10">
             {recipes.drinks.map((drinks) => (
               <DrinkCard key={drinks.idDrink} drink={drinks} />
             ))}
