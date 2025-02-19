@@ -78,7 +78,7 @@ export default function Modal() {
                   >
                     Instrucciones
                   </Dialog.Title>
-                  <p className="mt-2 text-sm text-gray-500">
+                  <p className="mt-2 text-sm text-gray-700">
                     {selectedRecipe.strInstructions}
                   </p>
                   <div className="mt-4 flex justify-between gap-4 text-white font-bold">
