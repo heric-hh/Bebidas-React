@@ -48,7 +48,15 @@ export default function Notification() {
                     onClick={() => {}}
                   >
                     <span className="sr-only">Cerrar</span>
-                    <XMarkIcon className="h-5 w-5" aria-hidden="true" />
+                    <XMarkIcon
+                      className="h-5 w-5"
+                      aria-hidden="true"
+                      onClick={() =>
+                        useAppStore.setState({
+                          notification: { show: false, text: "", error: false },
+                        })
+                      }
+                    />
                   </button>
                 </div>
               </div>

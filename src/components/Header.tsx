@@ -22,7 +22,13 @@ export default function Header() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (Object.values(searchFilters).includes("")) {
-      console.log("Todos los campos son obligatorios");
+      useAppStore.setState({
+        notification: {
+          show: true,
+          text: "Todos los campos son obligatorios",
+          error: true,
+        },
+      });
       return;
     }
     // Consultar las recetas
