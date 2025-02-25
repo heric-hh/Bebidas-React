@@ -61,7 +61,7 @@ export default function Modal() {
                     {selectedRecipe.strDrink}
                   </Dialog.Title>
                   <img
-                    className="w-96 mx-auto"
+                    className="w-96 mx-auto rounded-md"
                     src={selectedRecipe.strDrinkThumb}
                     alt={selectedRecipe.strDrink}
                   />
@@ -92,7 +92,7 @@ export default function Modal() {
                     <button
                       type="button"
                       className="w-full p-3 uppercase rounded
-                      bg-orange-400 hover:bg-orange-500"
+                      bg-primary hover:bg-green-800 transition-colors"
                       onClick={() => {
                         addFavorites(selectedRecipe);
                         closeModal();

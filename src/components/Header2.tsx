@@ -41,42 +41,48 @@ export default function Header() {
 
   useEffect(() => {
     fetchCategories();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   return (
-    <header className={isHome ? "bg-header" : "bg-slate-800"}>
-      <div className="mx-auto container px-5 py-16">
-        <div className="flex justify-between items-center">
-          <div>
-            <img className="w-32" src="/logo.svg" alt="logotipo" />
+    <>
+      <header className="flex w-100 justify-center h-screen">
+        <div className="bg-primary w-1/2 flex justify-center text-white">
+          <div className="flex flex-col justify-between">
+            <h2 className="font-bold text-8xl text-left mx-8 my-2 uppercase tracking-tighter">
+              The Cocktail DB: Busca tu receta favorita
+            </h2>
+            <nav className="flex gap-4 mx-8 py-8">
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "text-green-300 uppercase" : "text-white uppercase"
+                }
+                to="/"
+              >
+                Inicio
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "text-green-300 uppercase" : "text-white uppercase"
+                }
+                to="/favoritos/"
+              >
+                Favoritos
+              </NavLink>
+            </nav>
           </div>
-
-          <nav className="flex gap-4">
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "text-orange-500 uppercase font-bold"
-                  : "text-white uppercase font-bold"
-              }
-              to="/"
-            >
-              Inicio
-            </NavLink>
-            <NavLink
-              className={({ isActive }) =>
-                isActive
-                  ? "text-orange-500 uppercase font-bold"
-                  : "text-white uppercase font-bold"
-              }
-              to="/favoritos/"
-            >
-              Favoritos
-            </NavLink>
-          </nav>
         </div>
-        {isHome && (
+        <div className="bg-black w-1/2 h-screen">
+          <img
+            src="/public/header.jpg"
+            alt="header"
+            className="object-fill h-full"
+          />
+        </div>
+      </header>
+      {isHome && (
+        <div className="flex justify-center px-10 bg-black">
           <form
-            className="md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6"
+            className=" bg-primary my-32 p-10 rounded-lg shadow space-y-6 w-1/2"
             onSubmit={handleSubmit}
           >
             <div className="space-y-4">
@@ -127,8 +133,8 @@ export default function Header() {
               value="Buscar Recetas"
             />
           </form>
-        )}
-      </div>
-    </header>
+        </div>
+      )}
+    </>
   );
 }

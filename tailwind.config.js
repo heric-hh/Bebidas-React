@@ -6,6 +6,10 @@ export default {
       backgroundImage: {
         header: "url('/header.jpg')",
       },
+      colors: {
+        primary: "#16322D",
+        secondary: "#1E1E1E",
+      },
     },
   },
   plugins: [],
