@@ -72,11 +72,7 @@ export default function Header() {
           </div>
         </div>
         <div className="bg-black w-1/2 h-screen">
-          <img
-            src="/public/header.jpg"
-            alt="header"
-            className="object-fill h-full"
-          />
+          <img src="./header.jpg" alt="header" className="object-fill h-full" />
         </div>
       </header>
       {isHome && (
