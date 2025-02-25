@@ -1,4 +1,3 @@
-import { set } from "zod";
 import { StateCreator } from "zustand";
 import { FavoritesSliceType } from "./favoritesSlice";
 
